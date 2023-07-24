@@ -11,8 +11,8 @@
 
 extern char **environ;
 
-void print_env(char **args,char **env);
+void print_env(char **args, char **env);
 void do_exit(char **args);
-char *seperte(char *buffer,char **args, char *token);
+char *seperte(char *buffer, char **args, char *token);
 
 #endif

@@ -2,8 +2,9 @@
 /**
  * print_env - print infromations of pc
  * @args: ponter of array of characters
+ * @env: ponter to informations
  */
-void print_env(char **args,char **env)
+void print_env(char **args, char **env)
 {
 	if (strcmp(args[0], "env") == 0)
 	{
@@ -30,10 +31,11 @@ void do_exit(char **args)
 /**
  * seperte - seperte the string for more arguments
  * @buffer: array has string
+ * @args: ponter to array that saved command to execute
  * @token: variable save the little string
  * Return: pointer to first char
  */
-char *seperte(char *buffer,char **args, char *token)
+char *seperte(char *buffer, char **args, char *token)
 {
 	int i = 0;
 
