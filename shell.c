@@ -12,7 +12,7 @@ int main(void)
 	char *args[64];
 	pid_t child_pid;
 	int status;
-	char *token;
+	char *token = NULL;
 	char **env = environ;
 
 	while (1)
@@ -25,9 +25,9 @@ int main(void)
 			return (0);
 		}
 		buffer[strcspn(buffer, "\n")] = '\0';
-		seperte(buffer, token);
+		*args = seperte(buffer, args, token);
 		do_exit(args);
-		print_env(args);
+		print_env(args, env);
 		child_pid = fork();
 
 		if (child_pid == -1)
